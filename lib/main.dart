@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tharicki_demo_project/core/injection/injection.dart';
 import 'package:tharicki_demo_project/core/theme/app_theme.dart';
 import 'package:tharicki_demo_project/feed/presentation/pages/feed_page.dart';
 
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 
