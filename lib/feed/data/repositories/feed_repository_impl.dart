@@ -1,11 +1,13 @@
+import 'package:injectable/injectable.dart';
 import 'package:tharicki_demo_project/feed/data/datasource/feed_remote_datasource.dart';
 import 'package:tharicki_demo_project/feed/domain/entities/feed_entity.dart';
-import 'package:tharicki_demo_project/feed/domain/repository/feed_remote_repository.dart';
+import 'package:tharicki_demo_project/feed/domain/repository/feed_repository.dart';
 
-class FeedRemoteRepositoryImpl implements FeedRemoteRepository {
+@Injectable(as: FeedRepository)
+class FeedRepositoryImpl implements FeedRepository {
   final FeedRemoteDatasource remoteDataSource;
 
-  FeedRemoteRepositoryImpl({required this.remoteDataSource});
+  FeedRepositoryImpl({required this.remoteDataSource});
 
   @override
   Future<Feed> fetchFeed() async {

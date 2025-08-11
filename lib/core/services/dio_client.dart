@@ -1,15 +1,19 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 
+@lazySingleton
 class DioClient {
   final Dio _dio;
 
-  DioClient(String baseUrl)
-      : _dio = Dio(BaseOptions(
-          baseUrl: baseUrl,
-          connectTimeout: const Duration(seconds: 10),
-          receiveTimeout: const Duration(seconds: 10),
-          responseType: ResponseType.json,
-        )) {
+  DioClient({String? baseUrl})
+      : _dio = Dio(
+          BaseOptions(
+            baseUrl: baseUrl ?? 'https://tharicki-api-url.com',
+            connectTimeout: const Duration(seconds: 10),
+            receiveTimeout: const Duration(seconds: 10),
+            responseType: ResponseType.json,
+          ),
+        ) {
     _initializeInterceptors();
   }
 

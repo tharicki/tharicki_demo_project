@@ -1,7 +1,7 @@
 class User {
-  final int? id;
-  final String? name;
-  final String? lastName;
+  final int id;
+  final String name;
+  final String lastName;
   final DateTime? born;
   final DateTime? joinDate;
   final int? postsCount;
@@ -10,9 +10,9 @@ class User {
   final int? dayPosts;
 
   User({
-    this.id,
-    this.name,
-    this.lastName,
+    required this.id,
+    required this.name,
+    required this.lastName,
     this.born,
     this.joinDate,
     this.postsCount,
