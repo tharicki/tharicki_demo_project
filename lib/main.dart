@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tharicki_demo_project/core/injection/injection.dart';
-import 'package:tharicki_demo_project/core/presentation/base_page.dart';
+import 'package:tharicki_demo_project/core/presentation/pages/base_page.dart';
 import 'package:tharicki_demo_project/core/theme/app_theme.dart';
 
 void main() {

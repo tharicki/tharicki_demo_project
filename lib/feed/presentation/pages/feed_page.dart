@@ -21,6 +21,12 @@ class _FeedPageState extends State<FeedPage> {
   }
 
   @override
+  void dispose() {
+    cubit.close();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<FeedCubit, FeedState>(
       bloc: cubit,
@@ -37,8 +43,17 @@ class _FeedPageState extends State<FeedPage> {
                 final post = state.feed.posts[index];
                 return Card(
                   child: ListTile(
-                    title: Text(post.description),
-                    subtitle: Text(post.author.name),
+                    title: Text(
+                      post.description,
+                      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: AppSizes.fontMd),
+                    ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: AppSizes.sm),
+                      child: Text(
+                        post.author.name,
+                        style: const TextStyle(fontSize: AppSizes.fontSm),
+                      ),
+                    ),
                   ),
                 );
               },

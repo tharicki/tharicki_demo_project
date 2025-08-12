@@ -10,6 +10,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:tharicki_demo_project/core/presentation/cubit/navigation_cubit.dart'
+    as _i1041;
 import 'package:tharicki_demo_project/core/services/dio_client.dart' as _i643;
 import 'package:tharicki_demo_project/feed/data/datasource/feed_remote_datasource.dart'
     as _i1063;
@@ -19,6 +21,10 @@ import 'package:tharicki_demo_project/feed/domain/repository/feed_repository.dar
     as _i1015;
 import 'package:tharicki_demo_project/feed/presentation/cubit/feed_cubit.dart'
     as _i522;
+import 'package:tharicki_demo_project/profile/presentation/cubit/profile_cubit.dart'
+    as _i247;
+import 'package:tharicki_demo_project/publishment/presentation/cubit/publish_cubit.dart'
+    as _i888;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -32,6 +38,9 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     gh.factory<_i522.FeedCubit>(() => _i522.FeedCubit());
+    gh.factory<_i888.PublishCubit>(() => _i888.PublishCubit());
+    gh.factory<_i247.ProfileCubit>(() => _i247.ProfileCubit());
+    gh.factory<_i1041.NavigationCubit>(() => _i1041.NavigationCubit());
     gh.factory<_i1063.FeedRemoteDatasource>(
         () => _i1063.FeedRemoteDatasourceImpl());
     gh.lazySingleton<_i643.DioClient>(

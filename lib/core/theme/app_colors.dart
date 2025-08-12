@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static Color primary = const Color.fromRGBO(65, 165, 70, 1);
+  static Color secondary = const Color.fromARGB(255, 194, 194, 0);
   static Color light = const Color.fromRGBO(255, 255, 255, 1);
   static Color grey = const Color.fromRGBO(128, 128, 128, 1);
   static Color borderInputColor = const Color.fromRGBO(122, 122, 122, 1);
@@ -16,5 +17,6 @@ class AppColors {
   static Color white = const Color(0xFFFFFFFF);
   static Color green = const Color(0xFF4DB748);
   static Color red = Colors.red.shade900;
+  static Color black = Colors.black;
   static Color disableGray = const Color(0xFFB8B7B7);
 }
