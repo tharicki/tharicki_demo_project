@@ -7,7 +7,7 @@ import 'package:tharicki_demo_project/core/utils/strings.dart';
 import 'package:tharicki_demo_project/feed/presentation/cubit/feed_cubit.dart';
 import 'package:tharicki_demo_project/feed/presentation/pages/feed_page.dart';
 import 'package:tharicki_demo_project/profile/presentation/cubit/profile_cubit.dart';
-import 'package:tharicki_demo_project/profile/presentation/profile_page.dart';
+import 'package:tharicki_demo_project/profile/presentation/pages/profile_page.dart';
 import 'package:tharicki_demo_project/publishment/presentation/cubit/publish_cubit.dart';
 import 'package:tharicki_demo_project/publishment/presentation/pages/publish_page.dart';
 

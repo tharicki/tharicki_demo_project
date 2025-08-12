@@ -10,5 +10,8 @@ class ProfileCubit extends Cubit<ProfileState> {
 
   Future<void> fetchProfile() async {
     emit(ProfileLoading());
+
+    // Here is where you would call the repository and return all the data from user
+    // to emit the success state and show on page
   }
 }
