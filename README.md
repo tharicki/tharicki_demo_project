@@ -1,4 +1,4 @@
-# tharicki_demo_project
+# My Social Media - A demo project
 
 This project is a Flutter application built using Clean Architecture, designed to be scalable, maintainable, and easy to understand. It demonstrates best practices for organizing code, managing state, and integrating with APIs.
 
