@@ -1,4 +1,4 @@
-var feed = {
+var mockFeed = {
   "feed": [
     {
       "id": 1,

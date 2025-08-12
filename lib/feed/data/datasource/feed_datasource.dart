@@ -3,12 +3,12 @@ import 'package:tharicki_demo_project/feed/data/datasource/mock_feed.dart';
 import 'package:tharicki_demo_project/feed/data/models/feed_model.dart';
 import 'package:tharicki_demo_project/feed/domain/entities/feed_entity.dart';
 
-abstract class FeedRemoteDatasource {
+abstract class FeedDatasource {
   Future<Feed> fetchFeedItems();
 }
 
-@Injectable(as: FeedRemoteDatasource)
-class FeedRemoteDatasourceImpl implements FeedRemoteDatasource {
+@Injectable(as: FeedDatasource)
+class FeedDatasourceImpl implements FeedDatasource {
   @override
   Future<Feed> fetchFeedItems() async {
     // This is how I would connect to the API and fetch the feed items
@@ -16,7 +16,7 @@ class FeedRemoteDatasourceImpl implements FeedRemoteDatasource {
     // final response = await dioClient.get('/feed');
 
     // but to demonstrate the mock data usage, we'll return the mock feed directly
-    final response = feed;
+    final response = mockFeed;
     // mock a delay to get the data from API
     await Future.delayed(const Duration(seconds: 2));
 

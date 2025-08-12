@@ -13,8 +13,8 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:tharicki_demo_project/core/presentation/cubit/navigation_cubit.dart'
     as _i1041;
 import 'package:tharicki_demo_project/core/services/dio_client.dart' as _i643;
-import 'package:tharicki_demo_project/feed/data/datasource/feed_remote_datasource.dart'
-    as _i1063;
+import 'package:tharicki_demo_project/feed/data/datasource/feed_datasource.dart'
+    as _i793;
 import 'package:tharicki_demo_project/feed/data/repositories/feed_repository_impl.dart'
     as _i736;
 import 'package:tharicki_demo_project/feed/domain/repository/feed_repository.dart'
@@ -41,12 +41,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i888.PublishCubit>(() => _i888.PublishCubit());
     gh.factory<_i247.ProfileCubit>(() => _i247.ProfileCubit());
     gh.factory<_i1041.NavigationCubit>(() => _i1041.NavigationCubit());
-    gh.factory<_i1063.FeedRemoteDatasource>(
-        () => _i1063.FeedRemoteDatasourceImpl());
+    gh.factory<_i793.FeedDatasource>(() => _i793.FeedDatasourceImpl());
     gh.lazySingleton<_i643.DioClient>(
         () => _i643.DioClient(baseUrl: gh<String>()));
-    gh.factory<_i1015.FeedRepository>(() => _i736.FeedRepositoryImpl(
-        remoteDataSource: gh<_i1063.FeedRemoteDatasource>()));
+    gh.factory<_i1015.FeedRepository>(() =>
+        _i736.FeedRepositoryImpl(feedDataSource: gh<_i793.FeedDatasource>()));
     return this;
   }
 }
