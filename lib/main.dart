@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tharicki_demo_project/core/injection/injection.dart';
+import 'package:tharicki_demo_project/core/presentation/base_page.dart';
 import 'package:tharicki_demo_project/core/theme/app_theme.dart';
-import 'package:tharicki_demo_project/feed/presentation/pages/feed_page.dart';
 
 void main() {
   configureDependencies();
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "My Social Media",
       theme: AppTheme.theme,
-      home: const FeedPage(),
+      home: const BasePage(),
     );
   }
 }

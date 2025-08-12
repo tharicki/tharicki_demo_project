@@ -8,7 +8,7 @@ class AppColors {
   static Color colorDark = const Color.fromRGBO(48, 48, 56, 1);
 
   static Color background = const Color(0xFF161618);
-  static Color backgroundGrey = const Color(0xFF161618);
+  static Color backgroundGrey = const Color.fromARGB(255, 242, 242, 245);
 
   static Color textBold = const Color.fromARGB(255, 243, 242, 242);
   static Color textSubtitle = const Color(0xFF4DB748);

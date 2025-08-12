@@ -7,7 +7,7 @@ class FeedModel extends Feed {
 
   factory FeedModel.fromJson(Map<String, dynamic> json) {
     return FeedModel(
-      posts: List<Post>.from(json['posts'].map((post) => PostModel.fromJson(post))),
+      posts: List<Post>.from(json['feed'].map((post) => PostModel.fromJson(post))),
     );
   }
 

@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:tharicki_demo_project/core/theme/app_colors.dart';
 
 class AppTheme {
   static ThemeData get theme => ThemeData(
-        primaryColor: const Color(0xFFC62828),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFFC62828),
-          iconTheme: IconThemeData(color: Color(0xFF545454)),
+        primaryColor: AppColors.primary,
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.primary,
+          titleTextStyle: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            color: AppColors.white,
+          ),
+          iconTheme: IconThemeData(color: AppColors.white),
           elevation: 0,
           centerTitle: true,
         ),
-        inputDecorationTheme: const InputDecorationTheme(
+        inputDecorationTheme: InputDecorationTheme(
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Color(0xFF1A1A1A)),
+            borderSide: BorderSide(color: AppColors.borderInputColor),
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
